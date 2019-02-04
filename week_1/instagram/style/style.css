@@ -1,0 +1,180 @@
+body{
+    background-color: #f5f5f5;
+    overflow: scroll;
+}
+.phone_image{
+    position: absolute;
+    top: 35%;
+    left: 16%;
+}
+.front_photo{
+    position: absolute;
+    top: 16%;
+    left: 33.25%;
+}
+.registration_form{
+    border: 1px solid #d2d5db;
+    position: absolute;
+    left: 50%;
+    top:7%;
+    width: 30%;
+    height: 700px;
+    background-color: #ffffff;
+
+}
+#account{
+    top: 117.5%;
+    height: 10%;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0%;
+}
+.accounted{
+    text-align: center;
+    margin: 7% 1%;
+}
+.insta_text_logo{
+    position: absolute;
+    height: auto;
+    width: 70%;
+    margin: 0 15%;
+
+}
+.sign_text{
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    line-height: 20px;
+    font-family: Helvetica, sans-serif;
+    margin: 7% 12%;
+}
+.btns{
+    position: absolute;
+    border: 1px solid #3897f0;
+    background-color: #3897f0;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    width: 80%;
+    height: 7%;
+    margin: 5% 10%;
+}
+
+.or{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    color: #999;
+    margin: 5% 45%;
+}
+hr{
+    position: absolute;
+    color:#999;
+    top: 45%;
+    margin: 1.8% 10%;
+    width: 30%;
+}
+hr.first{
+    left: 0%;
+}
+hr.second{
+    left: 50%;
+}
+input{
+    position: absolute;
+    margin: 10% 10%;
+    height: 5%;
+    width: 78%;
+    border-radius: 4px;
+    color:#999;
+    padding: 0% 1%;
+    background-color: #f5f5f5;
+}
+.one{
+    top: 30%;
+}
+.two{
+    top:77%;
+    width: 80%;
+}
+input.tel{
+    top: 45%;
+}
+input.names{
+    top: 52%;
+}
+input.login{
+    top: 59%;
+}
+input.password{
+    top: 66%;
+}
+.regist{
+    position: absolute;
+    top: 84%;
+    margin: 10% 12%;
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+}
+.setup{
+    position: absolute;
+    top: 135%;
+    left: 43.5%;
+    height: 20%;
+    width: 40%;
+    padding: 10px 20px;
+    text-align: center;
+}
+.downimg{
+    position: absolute;
+    display: inline-block;
+    height: 25%;
+    width: 25%;
+    margin: 5% 5%;
+    left: 5%;
+}
+.d2{
+    left: 30%;
+}
+.d3{
+    left: 55%;
+}
+footer{
+    position: absolute;
+    top: 160%;
+    width: 100%;
+    margin: 2%;
+    padding: 2%;
+}
+.info{
+    position: absolute;
+    margin: 5%;
+    padding: 1%;
+    
+}
+.info li{
+    display: inline-block;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #09367c;
+}
+.info li a:visited{
+    color: #09367c;
+}
+footer h4{
+    position: absolute;
+    margin: 10% 5%;
+    font-size:12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999;
+}
+
+
