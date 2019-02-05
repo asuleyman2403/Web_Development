@@ -1,0 +1,281 @@
+
+body{
+    overflow:  scroll;
+    background-color: #e6e9f2;
+}
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid darkblue;
+    width: 100%;
+    margin: 0px 0px;
+    z-index: 100;
+    height: 100px;
+    background-color:#3f5d9a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.lefthead{
+    position: absolute;
+    left: 10%;
+    margin: 20px 20px;
+}
+
+.righthead{
+    position: absolute;
+    left: 47.5%;
+    width: 40%;
+    height: 100%;
+    margin: 20px 20px;
+    display: inline-block;
+}
+.righthead form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.block{
+    position: absolute;
+    margin: 20% 2%;
+    padding: 0px 10px;
+    margin: 10px 0px;
+}
+.nameblock{
+    position: absolute;
+    left: 10%;
+}
+.passwordblock{
+    position: absolute;
+    left: 60%;
+}
+.bttnblock{
+    position: absolute;
+    left: 95%;
+    top: 15%;
+}
+header .bttn_submit{
+    background-color: #4267b2;
+    border-color: #3f5d9a;
+    padding: 2px 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}
+header label{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+section{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 90%;
+    background-color: #e6e9f2;
+}
+.leftsection{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+.leftsection h2{
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 10%;
+    margin-top: 5%;
+    line-height: 1.6;
+    z-index: 100;
+    color: #0e385f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.leftsection img{
+    position: absolute;
+    left: 17%;
+    top: 12%;
+
+}
+.rightsection{
+    /*background-color: yellow;*/
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}
+.rightsection h1{
+    position: absolute;
+    left: 8%;
+    top: 0%;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #333333;
+}
+.rightsection h2{
+    position: absolute;
+    left: 8%;
+    top: 10%;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    color: #333333;
+}
+.rightsection .reg_form{
+    position: absolute;
+    left:8%;
+    top: 17%;
+    width: 80%;
+    height: 80%;
+}
+#name{
+    position: absolute;
+    height: 7%;
+    width: 30%;
+    border-radius: 5px;
+}
+#surname{
+    position: absolute;
+    left: 33%;
+    height: 7%;
+    width: 30%;
+    border-radius: 5px;
+}
+#onemail{
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    height: 7%;
+    width: 63%;
+    border-radius: 5px;
+}
+#password{
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    height: 7%;
+    width: 63%;
+    border-radius: 5px;
+}
+#bdaylabel{
+    position: absolute;
+    left: 0%;
+    top: 32%;
+    height: 3%;
+    width: 25%;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+#day, #month, #year{
+    position: absolute;
+    left: 0%;
+    top: 38%;
+    height: 6%;
+    width: 20%;
+    border-radius: 0px;
+}
+#day{
+    left: 0%;
+}
+#month{
+    left: 23%;
+}
+#year{
+    left: 46%;
+}
+#male, #female, #malel, #femalel{
+    position: absolute;
+    top: 50%;
+}
+
+#female{
+    left: 25%;
+}
+#malel{
+    left: 5%;
+}
+#femalel{
+    left: 30%;
+}
+
+.confirm{
+    position: absolute;
+    top: 54%;
+    font-size: 12px;
+    right: 40%;
+    color: #99afb6;
+}
+.confirm a{
+    color: #707dc4;
+}
+.confirm a:visited{
+    color: #707dc4;
+}
+.rightsection .bttn_submit{
+    position: absolute;
+    top: 90px;
+    background-color: #62a24f;
+    height: 40px;
+    width: 60%;
+    left: 1%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #3b6e22;
+}
+.stars{
+    position: absolute;
+    top: 130px;
+}
+footer{
+    position: absolute;
+    top: 105%;
+    width: 90%;
+    height: 10%;
+}
+
+footer ul,h6{
+    position: absolute;
+    text-align: left;
+    top: 10%;
+    left: 5%;
+    margin: 2% 5%;
+}
+
+footer ul li{
+    display: inline-block;
+    margin: 2px 5px;
+}
+footer ul li a{
+    color: #707dc4;
+    font-size: 14px;
+}
+footer ul li a:visited{
+    color: #707dc4;
+
+}
+footer .lang{
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    
+}
+footer h6{
+    position: absolute;
+    top: 200%;
+    left: 9%;
+    margin: 2% 5%;
+    color: #999;
+}
+footer .support{
+    position: absolute;
+    top: 60%;
+    width: 90%;
+    
+}
