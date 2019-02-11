@@ -1,0 +1,82 @@
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+}
+
+header{
+    background-color: #222;
+    padding: 30px 0;
+}
+
+h1, h2{
+    margin: 0;
+}
+
+
+.head_text{
+    color: #859196;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0 30px;
+}
+
+.section{
+    margin: 0;
+    width: 100%;
+}
+
+.h1_container{
+    margin: 20px 15%;
+    font-weight: 900;
+    font-size: 30px;
+    color: #222222;
+}
+#typer{
+    border-radius: 5px;
+    border: #cecece solid 1px;
+    margin: 20px 5% 20px 20%;
+    width: 50%;
+    height: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0 10px
+}
+.task_div{
+    vertical-align: middle;
+    border-radius: 5px;
+    border: #cecece solid 1px;
+    margin: 10px 15%;
+    height: 50px;
+    width: 70%;
+}
+.check{
+    margin: 15px 20px;
+    height: 20px;
+    width: 20px;
+}
+.check :checked{
+    text-decoration: line-through;
+}
+.task_text{
+    display: inline-block;
+    width: 100px;
+    margin: 15px 5px;
+    text-align: left;
+}
+.trash{
+    float: right;
+    margin: 15px 20px;
+    width: 20px;
+    height: 20px;
+}
+button{
+    color: white;
+    background-color: #4a8af4;
+    height: 40px;
+    width: 5%;
+    border: #9ccdc4 solid 1px;
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+}
