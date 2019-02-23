@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>New Tab</title>
-      <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>New Tab</title>
+    <!--meta http-equiv="Content-Security-Policy" content="script-src 'self' https://code.jquery.com/js/jquery-3.3.1.js 
+    https://code.jquery.com/js/jquery-3.3.1.slim.min.js https://cdnjs.cloudflare.com/js/ajax/libs/popper.js/1.14.7/umd/popper.min.js 
+    https://stackpath.bootstrapcdn.com/js/bootstrap/4.3.1/js/bootstrap.min.js"-->
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src = "script.js"></script>
     <link rel="stylesheet" href="./style.css"/>
-
-
   </head>
   <body style="background-image:url(./img/neil-iris-1322261-unsplash.jpg);">
     <div class = container>
-      <ul class = "nav nav-tabs" role = "tablist">
-          <li class = "active" ><a href="#home" data-toggle = "tab" role = "tab">Home</a></li>
-          <li ><a href="#toDoList" data-toggle = "tab" role = "tab">To do list</a></li>
-      </ul> 
-      <div class = "tab-content">
-          <div class = "tab-pane" role = "tabpanel" id = "home">
-            <div class="row">
-                <div class = "col-2">  </div>
-                <div class = "col-8">
-                    <div class = "row one">
-                        <div class = time>
-                            <h1 id = "currentTime"></h1>
-                        </div>
-                    </div>
-                    <div class = "row two">
-                        <div class = "greeting">
-                            <h2 id = "hello">Hello,  Assyl</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class = "col-2"></div>
-                </div>
-                </div>
-            <div class = "tab-pane" role = "tabpanel" id = "toDoList">
-                <div class="row">                                    <div class = "col-2">  </div>
+        <nav class="nav">
+            <a class="nav-link active" href="#home" data-toggle = "tab" role = "tab">Home</a>
+            <a class="nav-link" href="#toDoList" data-toggle = "tab" role = "tab">To do list</a>
+        </nav>
+        <div class = "tab-content">
+            <div class = "tab-pane active " role = "tabpanel" id = "home">
+                <div class="row">
+                    <div class = "col-2"></div>
                     <div class = "col-8">
                         <div class = "row one">
-                            <div class = time>
+                            <div class = "time">
                                 <h1 id = "currentTime"></h1>
                             </div>
                         </div>
@@ -52,11 +45,22 @@
                         </div>
                     </div>
                     <div class = "col-2"></div>
-                    </div>
                 </div>
-                      </div>
-          </div>
-      </div>
-    <script src = "script.js"></script>
+            </div>
+            <div class = "tab-pane " role = "tabpanel" id = "toDoList">
+                <div class="row">
+                    <div class = "col-2">  </div>
+                    <div class = "col-8" id = "toDoListColumn">
+                        <div class = "h1_container">
+                            <h1>To do list</h1>
+                        </div>
+                        <input id = "typer" type="text" placeholder="Type new Task">
+                        <button id = "addbtn" onclick="handleButtonClick()">add</button>
+                    </div>
+                    <div class = "col-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
   </body>
 </html>
