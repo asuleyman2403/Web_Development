@@ -10,6 +10,7 @@ import {ProviderService} from '../../services/provider.service';
 export class ViewerComponent implements OnInit {
   public taskLists: TaskList[] = [];
   public tasks: Task[] = [];
+
   constructor(private provider: ProviderService) { }
 
   ngOnInit() {
@@ -17,5 +18,7 @@ export class ViewerComponent implements OnInit {
       this.taskLists = res;
     });
   }
-
+  getTaskOfTaskList(taskList: TaskList) {
+    this.provider.getTasks(taskList.id).then(res => {this.tasks = res; });
+  }
 }
