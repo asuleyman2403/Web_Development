@@ -15,7 +15,7 @@
   background: #a2dc4d;
   color: #FFF;
   margin: 10px;
-  border: 1px solid #FFF;
+  border: 5px solid #FFF;
   border-radius: 5px;
   padding: 20px;
 }
@@ -29,7 +29,7 @@
   background: crimson;
   color: #FFF;
   margin: 10px;
-  border: 1px solid #FFF;
+  border: 5px solid #FFF;
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;

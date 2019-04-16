@@ -3,6 +3,7 @@
     <div *ngFor="let t of taskLists" (click) = "getTaskOfTaskList(t)" class = "taskList">{{t.id}} : {{t.name}}</div>
   </div>
   <div class="tasksContainer">
+      <div class="imitator"></div>
       <div *ngFor = "let t of tasks" class = "tasks">
         <div><span> ID:</span> {{t.id}}</div>
         <div><span> Name: </span> {{t.name}}</div>
