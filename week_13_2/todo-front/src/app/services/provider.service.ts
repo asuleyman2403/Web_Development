@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import {TaskList, Task} from '../models/models';
+import {TaskList, Task, Token} from '../models/models';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {MainService} from './main.service';
 @Injectable({
@@ -47,7 +47,19 @@ export class ProviderService extends MainService {
       });
   }*/
   deleteTask(task: Task) {
-    console.log(task.task_list.id);
     return this.delet('http://localhost:8000/api/task_lists/' + task.task_list.id + '/tasks/' + task.id, {});
   }
+
+  auth(username: string, password: string): Promise<Token> {
+      return this.post('http://localhost:8000/api/login/', {
+        username: username,
+        password: password
+      });
+  }
+
+  logout(): Promise<any> {
+    return this.post('http://localhost:8000/api/logout/', {
+    });
+  }
+
 }

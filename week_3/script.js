@@ -6,27 +6,27 @@ $(document).ready(function(){
 let setCurrentTime = () => {
     let date = new Date();
     document.getElementById('currentTime').innerHTML = date.getHours() + " : " + date.getMinutes();
-}
+};
 
 const list = [];
 eraseTask = (className) => {
     document.getElementById('toDoList').removeChild(document.body.getElementsByClassName("task_div " + className)[0]);
-}
+};
 
 crossText = (className) => {
     let checkbox = document.body.getElementsByClassName("check " + className)[0];
-    if(checkbox.checked == true){
+    if(checkbox.checked === true){
         document.body.getElementsByClassName("task_text " + className)[0].setAttribute("style","text-decoration: line-through;");
     }
     else{
         document.body.getElementsByClassName("task_text " + className)[0].setAttribute("style","text-decoration: none;");
     }
-}
+};
 
 
 handleButtonClick = () =>{
     let element = document.getElementById("typer");
-    if(element.value == ""){
+    if(element.value === ""){
         alert("Type something to add");
     }else{
         let div = document.createElement('div');
@@ -43,7 +43,7 @@ handleButtonClick = () =>{
         taskText.textContent = element.value;
 
         let img = document.createElement('img');
-        img.src = "../img/trash.png";
+        img.src = "./img/trash.png";
         img.className = "trash " + list.length;
         img.setAttribute("onclick",`eraseTask(${ img.className.split(' ')[1] })`);
 
@@ -53,4 +53,4 @@ handleButtonClick = () =>{
         document.getElementById("toDoList").appendChild(div);
         element.value = "";
     }
-}
+};

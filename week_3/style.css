@@ -16,13 +16,13 @@
   }
   .tab-content{
     min-height: 100%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
   }
   .nav{
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.3);
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -117,6 +117,7 @@ button{
     background-color: #4a8af4;
     height: 40px;
     width: 10%;
+    min-width: 50px;
     border: #9ccdc4 solid 1px;
     border-radius: 5px;
     font-family: 'Titillium Web', sans-serif;

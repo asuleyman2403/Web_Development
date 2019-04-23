@@ -31,17 +31,13 @@
             </div>
           </div>
         </div>
-      <div class="inTasks__create">
-        <input type="text" class = "createInput" placeholder="New Task Name... No more than 200" [(ngModel)]="taskName">
-        <input type="text" class = "createInput" placeholder="New Task Status... No more than 200" [(ngModel)]="taskStatus">
-        <div>
-        <div *ngFor="let t of taskLists" class = "ids">
-          <span> {{t.id}} </span>
-        </div>
-        <div>
-        <input type="text" class = "createInput" placeholder="Pick TaskList IDs above" [(ngModel)]="taskListID">
-        <button class="createBtn" (click) = "createTask()">CREATE</button>
-      </div>
+<!--      <div class="inTasks__create">-->
+<!--        <input type="text" class = "createInput" placeholder="New Task Name... No more than 200" [(ngModel)]="taskName">-->
+<!--        <input type="text" class = "createInput" placeholder="New Task Status... No more than 200" [(ngModel)]="taskStatus">-->
+<!--        <div>-->
+<!--        <div>-->
+<!--        <button class="createBtn" (click) = "createTask()">CREATE</button>-->
+<!--      </div>-->
       </div>
   </div>
 
