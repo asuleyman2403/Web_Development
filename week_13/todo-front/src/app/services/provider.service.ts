@@ -17,7 +17,7 @@ export class ProviderService extends MainService {
     return this.get(`http://localhost:8000/api/task_lists/${id}/tasks/`, {});
   }
   createTaskList(namE: string): Promise<TaskList> {
-    return this.post('http://localhost:8000/api/task_lists', {name: namE});
+    return this.post('http://localhost:8000/api/task_lists/', {name: namE});
   }
   updateTaskList(taskList: TaskList) {
     return this.put('http://localhost:8000/api/task_lists/' + taskList.id, {name : taskList.name});
@@ -28,7 +28,7 @@ export class ProviderService extends MainService {
   }
 
   updateTask(task: Task) {
-    return this.put('http://localhost:8000/api/task_lists/' + task.task_list.id + '/tasks/' + task.id, {
+    return this.put('http://localhost:8000/api/task_lists/' + task.task_list.id + '/tasks/' + task.id + '/', {
       name: task.name,
       task_list: task.task_list,
       status: task.status,

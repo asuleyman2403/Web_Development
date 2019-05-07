@@ -36,7 +36,7 @@ def task_list(request, pk):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         t_list.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

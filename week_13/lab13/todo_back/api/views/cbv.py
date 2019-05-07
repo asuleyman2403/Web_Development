@@ -10,19 +10,21 @@ from rest_framework.decorators import permission_classes
 
 
 class TaskListsTasks(APIView):
+
+    permission_classes = (IsAuthenticated,)
+    
     def get_object(self, pk):
         try:
             return TaskList.objects.get(id=pk)
         except TaskList.DoesNotExist:
             raise Http404
 
-    @permission_classes((IsAuthenticated,))
+    
     def get(self, request, pk):
         t_list = self.get_object(pk)
         serializer = TaskSerializer(t_list.task_set.all(), many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    @permission_classes((IsAuthenticated,))
     def post(self, request, pk):
         t_list = request.data.pop('task_list')
         task_list = TaskList(t_list['id'], t_list['name'])

@@ -11,13 +11,13 @@ export class ProviderService extends MainService {
   }
 
   getTaskLists(): Promise<TaskList[]> {
-    return this.get('http://127.0.0.1:8000/api/task_lists',  {});
+    return this.get('http://127.0.0.1:8000/api/task_lists/',  {});
   }
   getTasks(id: number) {
     return this.get(`http://localhost:8000/api/task_lists/${id}/tasks/`, {});
   }
   createTaskList(namE: string): Promise<TaskList> {
-    return this.post('http://localhost:8000/api/task_lists', {name: namE});
+    return this.post('http://localhost:8000/api/task_lists/', {name: namE});
   }
   updateTaskList(taskList: TaskList) {
     return this.put('http://localhost:8000/api/task_lists/' + taskList.id, {name : taskList.name});

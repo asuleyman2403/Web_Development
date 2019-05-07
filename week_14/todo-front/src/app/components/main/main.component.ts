@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TaskList, Task} from '../../models/models';
 import {ProviderService} from '../../services/provider.service';
-
+import * as moment from 'moment';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,11 +10,19 @@ import {ProviderService} from '../../services/provider.service';
 export class MainComponent implements OnInit {
   public taskLists: TaskList[] = [];
   public tasks: Task[] = [];
-  public name = '';
   public targetTaskList: TaskList;
+  public name = '';
   public username = '';
   public password = '';
   public logged = false;
+  public taskName = '';
+  public taskStatus = '';
+  public sorting = '';
+  public sortTasks = '';
+  public searchTaskList = '';
+  public searchTask = '';
+  public filterValue = '';
+  public filterName = '';
   constructor(private provider: ProviderService) { }
 
   ngOnInit() {
@@ -28,6 +36,11 @@ export class MainComponent implements OnInit {
       });
     }
   }
+
+  formatDate(date: Date) {
+    return moment(date).format('YYYY-MM-DD');
+  }
+
   getTaskOfTaskList(taskList: TaskList) {
     this.targetTaskList = taskList;
     this.provider.getTasks(taskList.id).then(res => {this.tasks = res; });
@@ -89,16 +102,38 @@ export class MainComponent implements OnInit {
       this.logged = false;
     });
   }
-    /*createTask() {
-      let createdTask: Task;
-      createdTask.name = this.name;
-      createdTask.status = this.taskStatus;
-      createdTask.created_at = Date.now();
-      createdTask.due_on = Date.now() + (1000 * 60 * 60 * 24);
-      createdTask.task_list = this.targetTaskList;
-      this.provider.createTask(createdTask).then(res => {
-        this.taskName = '';
-        this.taskStatus = '';
+  createTask() {
+      const createdAt = Date.now();
+      const dueOn = Date.now() + (1000 * 60 * 60 * 24);
+      if (this.targetTaskList !== undefined) {
+        this.provider.createTask(this.taskName, this.taskStatus, createdAt, dueOn, this.targetTaskList).then(res => {
+          this.taskName = '';
+          this.taskStatus = '';
+          this.provider.getTasks(this.targetTaskList.id).then( r => {
+            this.tasks = r;
+          });
+        });
+      } else {
+        alert('Click to the taskList where you would like to add task!');
+      }
+
+  }
+
+  sort() {
+      this.provider.getTaskLists(this.sorting, this.searchTaskList).then( res => {
+        this.taskLists = res;
       });
-    }*/
+  }
+
+  sortingOfTasks() {
+    if (this.targetTaskList === undefined) {
+      alert('Click to the taskList to see tasks');
+    } else {
+        this.provider.getTasks(this.targetTaskList.id, this.sortTasks, this.searchTask, this.filterName + '=' + this.filterValue)
+          .then(res => {
+              this.tasks = res;
+          });
+    }
+  }
+
 }
